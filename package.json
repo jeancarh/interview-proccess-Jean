@@ -1,0 +1,27 @@
+{
+  "name": "underwriting-decision-api",
+  "version": "1.0.0",
+  "description": "Deterministic underwriting decision API (Express + hexagonal architecture)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "dev": "node --watch src/server.ts",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "test:domain": "node --test tests/decide.test.ts",
+    "test:http": "node --test tests/http.test.ts",
+    "test:watch": "node --test --watch \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  }
+}
